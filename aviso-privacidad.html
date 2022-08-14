@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Aviso de Privacidad</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="./css/estilose.css">
+</head>
+<body>
+	<main>
+		<center><h1>Aviso de Privacidad</h1></center><br>
+		<p>En base a lo establecido en la ley 15 de protección de datos de carácter personal tenemos la obligación de informarle que los datos personales  recopilados por la empresa ecopapel  a lo largo de su visita en esta web a base de cookies seran tratados de forma confidencial y responsable a fin de analizar sus gustos y preferencias para ofrecerle un mejor servicio relacionado a nuestros productos, haciendo de su conocimiento el poder de ejercer sus derechos de acceso, rectificación, cancelación y oposición de datos de carácter personal a través de un correo electrónico dirigido a https://EcoPapel.github.io/EcoPapel/</p><br>
+		<br>
+		<h3>Aviso de Cookies</h3>
+		<p>Nosotros y nuestros socios almacenamos o accedemos a información de dispositivos, tales como cookies y procesamos datos personales, tales como identificadores únicos e información estándar enviada por un dispositivo, para los propósitos descritos a continuación. Puede hacer clic para otorgarnos su consentimiento a nosotros y a nuestros socios para que llevemos a cabo el procesamiento con dichos propósitos. De forma alternativa, puede hacer clic para denegar.</p>
+		<p>
+            <a href="#" id="marcarTodo">Actualizar todo</a> |
+            <a href="#" id="desmarcarTodo">Bloquear todo</a>
+        </p>
+        <form name="f1" id="formElement">
+        <p>
+            <input type="checkbox" name="ch1" /> Almacenar o acceder a información en un dispositivo    
+            <br>
+            <input type="checkbox" name="ch2" /> Seleccionar anuncios básicos 
+            <br>
+            <input type="checkbox" name="ch3" /> Crear un perfil publicitario personalizado   
+            <br>
+            <input type="checkbox" name="ch4" /> Seleccionar anuncios personalizados
+            <br>
+            <input type="checkbox" name="ch5" /> Crear un perfil para la personalización de contenidos  
+            <br>
+            <input type="checkbox" name="ch6" /> Seleccionar contenido personalizado  
+            <br>
+            <input type="checkbox" name="ch7" /> Medir el rendimiento de los anuncios  
+            <br>
+            <input type="checkbox" name="ch8" /> Medir el rendimiento del contenido   
+            <br>
+            <input type="checkbox" name="ch9" /> Utilizar estudios de mercado a fin de generar información sobre el público
+            <br>
+            <input type="checkbox" name="ch10" /> Desarrollar y mejorar productos    
+            <br>
+            <input type="checkbox" name="ch11" /> Utilizar datos de localización geografica precisa    
+            <br>
+            <input type="checkbox" name="ch12" /> Analizar activamente las características del dispositivo para su identificacion    
+            <br>
+            <input type="checkbox" name="ch13" /> Características y propósitos especiales
+            <br>
+            <a href="./index.html">Enviar</a><br>
+        </p>
+    </form>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById('marcarTodo').addEventListener('click', function(e) {
+                e.preventDefault();
+                //seleccionarTodo();
+                checkAll();
+            });
+            document.getElementById('desmarcarTodo').addEventListener('click', function(e) {
+                e.preventDefault();
+                //desmarcarTodo();
+                uncheckAll();
+            });
+        });
+    
+        function seleccionarTodo() {
+            for (let i=0; i < document.f1.elements.length; i++) {
+                if(document.f1.elements[i].type === "checkbox") {
+                    document.f1.elements[i].checked = true;
+                }
+            }
+        }
+    
+        function desmarcarTodo() {
+            for (let i=0; i<document.f1.elements.length; i++) {
+                if(document.f1.elements[i].type == "checkbox") {
+                    document.f1.elements[i].checked = false
+                }
+            }
+        }
+    
+        function checkAll() {
+            document.querySelectorAll('#formElement input[type=checkbox]').forEach(function(checkElement) {
+                checkElement.checked = true;
+            });
+        }
+    
+        function uncheckAll() {
+            document.querySelectorAll('#formElement input[type=checkbox]').forEach(function(checkElement) {
+                checkElement.checked = false;
+            });
+        }
+    </script>
+	</main>
+</body>
+</html>
